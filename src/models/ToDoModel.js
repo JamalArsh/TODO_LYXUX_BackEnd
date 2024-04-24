@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const todoSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    default: "",
   },
   description: {
     type: String,
@@ -12,7 +12,6 @@ const todoSchema = new mongoose.Schema({
   isCompleted: {
     type: Boolean,
     default: false,
-    required: true,
   },
 });
 

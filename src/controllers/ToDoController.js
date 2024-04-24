@@ -24,6 +24,10 @@ module.exports.updateToDo = async (req, res) => {
 };
 
 module.exports.deleteToDo = async (req, res) => {
+  console.log("====================================");
+  console.log(req.body);
+  console.log("====================================");
+
   const { _id } = req.body;
 
   ToDoModel.findByIdAndDelete(_id)
